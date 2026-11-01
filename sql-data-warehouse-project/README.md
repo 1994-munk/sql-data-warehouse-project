@@ -1,9 +1,18 @@
 
-# Data Warehouse and Analytics Project
+# 🚀 Data Warehouse and Analytics Project
 
 This project demonstrates an end-to-end data warehousing solution built from CRM and ERP CSV files, processed in MySQL and modeled for analytics. It follows a Medallion Architecture approach to turn raw source data into clean, business-ready reporting tables.
 
-<img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Data warehouse animation" width="900" />
+<div align="center">
+  <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Data warehouse animation" width="900" />
+</div>
+
+<div align="center">
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" />
+  <img alt="ETL" src="https://img.shields.io/badge/ETL-Pipeline-00B894?style=flat&logo=database&logoColor=white" />
+  <img alt="Analytics" src="https://img.shields.io/badge/Analytics-SQL-FFB000?style=flat&logo=sql&logoColor=white" />
+  <img alt="CRM + ERP" src="https://img.shields.io/badge/CRM_%2B_ERP-Data-6C63FF?style=flat&logo=apache-spark&logoColor=white" />
+</div>
 
 ---
 
@@ -11,7 +20,7 @@ This project demonstrates an end-to-end data warehousing solution built from CRM
 
 The project is structured around the **Bronze**, **Silver**, and **Gold** layers:
 
-![Data Architecture](docs/data_architecture.png)
+![Data Architecture](docs/data_flow.gif)
 
 1. **Bronze Layer**: Raw data is ingested from CRM and ERP CSV files into MySQL.
 2. **Silver Layer**: Data is cleaned, standardized, and normalized for consistency.
