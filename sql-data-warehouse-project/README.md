@@ -4,7 +4,7 @@
 This project demonstrates an end-to-end data warehousing solution built from CRM and ERP CSV files, processed in MySQL and modeled for analytics. It follows a Medallion Architecture approach to turn raw source data into clean, business-ready reporting tables.
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Data warehouse animation" width="900" />
+  <img src="docs/data_warehouse_hero.gif" alt="Data warehouse hero animation" width="1000" />
 </div>
 
 <div align="center">
@@ -20,7 +20,7 @@ This project demonstrates an end-to-end data warehousing solution built from CRM
 
 The project is structured around the **Bronze**, **Silver**, and **Gold** layers:
 
-![Data Architecture](docs/data_flow.gif)
+![Data Architecture](docs/data_flow_dark.png)
 
 1. **Bronze Layer**: Raw data is ingested from CRM and ERP CSV files into MySQL.
 2. **Silver Layer**: Data is cleaned, standardized, and normalized for consistency.
