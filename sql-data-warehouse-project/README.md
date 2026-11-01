@@ -1,122 +1,124 @@
 
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+This project demonstrates an end-to-end data warehousing solution built from CRM and ERP CSV files, processed in MySQL and modeled for analytics. It follows a Medallion Architecture approach to turn raw source data into clean, business-ready reporting tables.
+
+<img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Data warehouse animation" width="900" />
 
 ---
+
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+The project is structured around the **Bronze**, **Silver**, and **Gold** layers:
+
 ![Data Architecture](docs/data_architecture.png)
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
-
----
-## 📖 Project Overview
-
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
-- Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
+1. **Bronze Layer**: Raw data is ingested from CRM and ERP CSV files into MySQL.
+2. **Silver Layer**: Data is cleaned, standardized, and normalized for consistency.
+3. **Gold Layer**: Business-ready tables are modeled for reporting and dashboarding.
 
 ---
 
-## 🛠️ Important Links & Tools:
+## 📌 Project Overview
 
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
-- **[Notion Project Steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Access to All Project Phases and Tasks.
+This repository covers:
 
----
+1. **Data ingestion** from source CSV files
+2. **ETL pipelines** for data transformation and validation
+3. **Data modeling** with star-schema style analytics tables
+4. **Reporting and insights** using SQL-based analysis
 
-## 🚀 Project Requirements
-
-### Building the Data Warehouse (Data Engineering)
-
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+Key focus areas:
+- MySQL database setup
+- Data warehouse design
+- CRM + ERP integration
+- Analytical SQL queries
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
+## 🛠️ Tools and Stack
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+- **MySQL**: Primary database engine for storage and transformation
+- **MySQL Workbench**: Database development and management
+- **Git & GitHub**: Version control and project tracking
+- **Draw.io**: Architecture and flow diagramming
+- **CSV datasets**: Source data for CRM and ERP systems
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
-
-For more details, refer to [docs/requirements.md](docs/requirements.md).
+---
 
 ## 📂 Repository Structure
-```
+
+```text
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
+├── datasets/                           # Raw CRM and ERP CSV files
+├── docs/                               # Project documentation and diagrams
+│   ├── etl.drawio
+│   ├── data_architecture.drawio
+│   ├── data_catalog.md
+│   ├── data_flow.drawio
+│   ├── data_models.drawio
+│   └── naming-conventions.md
+├── scripts/                            # SQL scripts for ETL and modeling
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/
+│   ├── mysql/
+│   └── init_database.sql
+├── tests/                              # Validation and quality checks
 ├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── LICENSE                             # License information
+├── .gitignore
+├── requirements.txt
+└── docs/requirements.md                # Project requirements and scope
 ```
+
 ---
 
+## ⚡ Interactive Project Flow
+
+<details>
+<summary><strong>Click to expand: project flow</strong></summary>
+
+1. Upload CRM and ERP CSV files into the raw staging area.
+2. Create the MySQL databases and schema structure.
+3. Load the data into the Bronze layer.
+4. Clean and normalize fields in the Silver layer.
+5. Build business-ready analytical tables in the Gold layer.
+6. Run SQL queries to generate insights and reports.
+
+</details>
+
+---
+
+## 🚀 How to Run
+
+1. Install **MySQL** and **MySQL Workbench**.
+2. Open a MySQL client or terminal and connect to your local instance.
+3. Run the initialization scripts in the `scripts/mysql/` folder to create the required databases.
+4. Load the CRM and ERP CSV files into the raw tables.
+5. Execute the Bronze, Silver, and Gold SQL scripts in sequence.
+6. Query the final tables to explore sales, customer, and product insights.
+
+Example workflow:
+
+```bash
+mysql -u root -p < scripts/mysql/00_init.sql
+```
+
+Then run the SQL scripts in order from the `scripts/` directories using MySQL Workbench or the MySQL CLI.
+
+---
+
+## 🧪 Example Use Cases
+
+- Customer segmentation and retention analysis
+- Product performance and sales trend reporting
+- ERP and CRM data reconciliation
+- Data warehouse testing and validation
+
+---
 
 ## 🛡️ License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
-
-## 🌟 About Me
-
-Hi there! I'm **Baraa Khatib Salkini**, also known as **Data With Baraa**. I’m an IT professional and passionate YouTuber on a mission to share knowledge and make working with data enjoyable and engaging!
-
-Let's stay in touch! Feel free to connect with me on the following platforms:
-
-[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](http://bit.ly/3GiCVUE)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini)
-[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.datawithbaraa.com)
-[![Newsletter](https://img.shields.io/badge/Newsletter-FF5722?style=for-the-badge&logo=substack&logoColor=white)](https://bit.ly/BaraaNewsletter)
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/baraasalkini)
-[![Join](https://img.shields.io/badge/Join-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@datawithbaraa)
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share it with attribution.
